@@ -1,7 +1,8 @@
 param(
   [Parameter(Mandatory = $true)]
   [string]$Source,
-  [string]$Destination
+  [string]$Destination,
+  [string[]]$Slugs
 )
 
 Add-Type -AssemblyName System.Drawing
@@ -14,6 +15,8 @@ $photos = @(
   @{ Slug = 'golden-flock'; Source = 'Best Best\DSCF6067-Enhanced-NR.JPG' },
   @{ Slug = 'shorebirds-at-sunset'; Source = 'DSCF6045-Enhanced-NR.JPG' },
   @{ Slug = 'three-shorebirds'; Source = 'Best Best\DSCF6059-Enhanced-NR.jpg' },
+  @{ Slug = 'hummingbird'; Source = '_DSF0282.JPG' },
+  @{ Slug = 'twin-fawns'; Source = '_DSF8435.JPG' },
   @{ Slug = 'beaver'; Source = '_DSF0175-Enhanced-NR.JPG' },
   @{ Slug = 'heron-landing'; Source = '_DSF2727-Enhanced-NR.JPG' },
   @{ Slug = 'misty-ducks'; Source = 'Best Best\_DSF2802-2.jpg' },
@@ -22,17 +25,12 @@ $photos = @(
   @{ Slug = 'red-winged-blackbird'; Source = 'Best Best\_DSF3280-Enhanced-NR-2.JPG' },
   @{ Slug = 'squirrel-on-lichen'; Source = '_DSF8174.JPG' },
   @{ Slug = 'robin-with-berry'; Source = '20250123-DSCF1249-Enhanced-NR.JPG' },
-  @{ Slug = 'hummingbird'; Source = 'Best Best\_DSF0255 (1).JPG' },
-  @{ Slug = 'american-coot'; Source = 'American-Coot.JPG' },
   @{ Slug = 'bluebird'; Source = '_DSF0611-Enhanced-NR.JPG' },
   @{ Slug = 'heron-reflection'; Source = '_DSF3017-Enhanced-NR.JPG' },
   @{ Slug = 'distant-heron'; Source = 'Best Best\_DSF2294-Enhanced-NR.JPG' },
-  @{ Slug = 'wetland-heron'; Source = 'Best Best\_DSF3521-Enhanced-NR.JPG' },
   @{ Slug = 'heron-in-foliage'; Source = '_DSF7906-2.JPG' },
   @{ Slug = 'ducklings'; Source = 'Best Best\_DSF7982.JPG' },
-  @{ Slug = 'duck-portrait'; Source = 'DSCF4584-Enhanced-NR.JPG' },
   @{ Slug = 'alligator'; Source = 'DSCF5173-Enhanced-NR.JPG' },
-  @{ Slug = 'squirrel-in-grass'; Source = '_DSF0595-Enhanced-NR.JPG' },
   @{ Slug = 'heron-at-sunset'; Source = 'DSCF6183-Enhanced-NR.JPG' },
   @{ Slug = 'horses-on-beach'; Source = 'DSCF2697.jpg' },
   @{ Slug = 'beach-house'; Source = 'DSCF2601-Enhanced-NR.jpg' },
@@ -42,7 +40,7 @@ $photos = @(
   @{ Slug = 'sunlit-tree'; Source = '908520011039-R1-027.jpg' },
   @{ Slug = 'grain-silos'; Source = 'Best Best\_DSF5927-HDR.JPG' },
   @{ Slug = 'tugboat'; Source = 'DSCF3234-Enhanced-NR.jpg' },
-  @{ Slug = 'snowy-street'; Source = 'DSCF3394-HDR.JPG' },
+  @{ Slug = 'steel-staircase'; Source = '_DSF9279.JPG' },
   @{ Slug = 'city-skyline'; Source = 'DSCF4130-Enhanced-NR.jpg' },
   @{ Slug = 'winter-berries'; Source = '_DSF1234.jpg' },
   @{ Slug = 'purple-flowers'; Source = 'Best Best\660609010312-R1-015.jpg' },
@@ -113,7 +111,14 @@ $thumbDirectory = Join-Path $Destination 'thumb'
 $largeDirectory = Join-Path $Destination 'large'
 New-Item -ItemType Directory -Force -Path $thumbDirectory, $largeDirectory | Out-Null
 
-foreach ($photo in $photos) {
+$photosToExport = if ($Slugs) {
+  $photos | Where-Object { $Slugs -contains $_.Slug }
+}
+else {
+  $photos
+}
+
+foreach ($photo in $photosToExport) {
   $inputPath = Join-Path $Source $photo.Source
   if (-not (Test-Path -LiteralPath $inputPath)) {
     throw "Missing source image: $inputPath"
@@ -126,5 +131,5 @@ foreach ($photo in $photos) {
   Write-Output $photo.Slug
 }
 
-Write-Output "Exported $($photos.Count) photographs to $Destination."
+Write-Output "Exported $($photosToExport.Count) photographs to $Destination."
 

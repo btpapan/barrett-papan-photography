@@ -1,6 +1,6 @@
 # Barrett Papan Photography
 
-A static photography portfolio built with HTML, CSS, and JavaScript. Wildlife is the default gallery, with separate views for places and details.
+A static photography portfolio built with HTML, CSS, and JavaScript. Wildlife is the default gallery, with separate views for places and flora.
 
 ## Local preview
 
@@ -18,6 +18,8 @@ The original full-resolution files stay outside the repository. To rebuild the e
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\export-images.ps1 -Source "C:\path\to\Best"
 ```
+
+Pass `-Slugs hummingbird,twin-fawns` to regenerate only selected exports.
 
 When adding work, update the mapping in `tools/export-images.ps1` and the matching photo metadata in `script.js`, regenerate exports, preview locally, then commit the source and image changes together.
 
