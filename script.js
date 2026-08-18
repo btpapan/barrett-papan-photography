@@ -35,6 +35,7 @@ const photos = [
 
 const gallery = document.querySelector('#gallery');
 const filters = [...document.querySelectorAll('.filter')];
+const filterBar = document.querySelector('.filters');
 const lightbox = document.querySelector('#lightbox');
 const lightboxImage = document.querySelector('#lightbox-image');
 const lightboxCategory = document.querySelector('#lightbox-category');
@@ -134,8 +135,18 @@ function stepPhoto(direction) {
   setLightboxPhoto(visibleIndexes[nextPosition]);
 }
 
+function scrollToGalleryStart() {
+  const galleryTop = gallery.getBoundingClientRect().top + window.scrollY;
+  const top = galleryTop - header.offsetHeight - filterBar.offsetHeight - 12;
+  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  window.scrollTo({ top: Math.max(0, top), behavior });
+}
+
 filters.forEach((button) => {
-  button.addEventListener('click', () => applyFilter(button.dataset.filter));
+  button.addEventListener('click', () => {
+    applyFilter(button.dataset.filter);
+    requestAnimationFrame(scrollToGalleryStart);
+  });
 });
 
 closeButton.addEventListener('click', () => lightbox.close());
