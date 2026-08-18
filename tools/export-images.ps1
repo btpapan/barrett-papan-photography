@@ -39,8 +39,6 @@ $photos = @(
   @{ Slug = 'marina'; Source = '908520011039-R1-023.jpg' },
   @{ Slug = 'sunlit-tree'; Source = '908520011039-R1-027.jpg' },
   @{ Slug = 'grain-silos'; Source = 'Best Best\_DSF5927-HDR.JPG' },
-  @{ Slug = 'tugboat'; Source = 'DSCF3234-Enhanced-NR.jpg' },
-  @{ Slug = 'steel-staircase'; Source = '_DSF9279.JPG' },
   @{ Slug = 'city-skyline'; Source = 'DSCF4130-Enhanced-NR.jpg' },
   @{ Slug = 'winter-berries'; Source = '_DSF1234.jpg' },
   @{ Slug = 'purple-flowers'; Source = 'Best Best\660609010312-R1-015.jpg' },

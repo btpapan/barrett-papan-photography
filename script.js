@@ -26,8 +26,6 @@ const photos = [
   { slug: 'marina', category: 'places', width: 2256, height: 1513, alt: 'A small marina building reflected in still water.' },
   { slug: 'sunlit-tree', category: 'places', width: 2728, height: 1830, alt: 'A large tree backlit by late afternoon sun.' },
   { slug: 'grain-silos', category: 'places', width: 2048, height: 1365, alt: 'Grain silos rising beyond a bright green field.' },
-  { slug: 'tugboat', category: 'places', width: 4916, height: 3277, alt: 'The wheelhouse of a tugboat seen from shore.' },
-  { slug: 'steel-staircase', category: 'places', width: 6000, height: 4000, alt: 'A geometric steel and timber staircase seen against a vivid blue sky.' },
   { slug: 'city-skyline', category: 'places', width: 4818, height: 3212, alt: 'A city skyline seen across a river in winter light.' },
   { slug: 'winter-berries', category: 'flora', width: 4896, height: 3264, alt: 'Red berries and green leaves lit from behind.' },
   { slug: 'purple-flowers', category: 'flora', width: 2728, height: 1830, alt: 'Soft purple flowers in cool evening color.' },
