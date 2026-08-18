@@ -68,7 +68,7 @@ function renderGallery() {
     const image = document.createElement('img');
     image.src = `images/thumb/${photo.slug}.jpg`;
     image.srcset = `images/thumb/${photo.slug}.jpg 1440w, images/large/${photo.slug}.jpg 3200w`;
-    image.sizes = '(max-width: 700px) calc(100vw - 28px), (max-width: 1000px) calc((100vw - 46px) / 2), calc((100vw - 76px) / 3)';
+    image.sizes = '(max-width: 700px) calc(100vw - 28px), (max-width: 1100px) calc((100vw - 46px) / 2), calc((100vw - 86px) / 4)';
     image.alt = photo.alt;
     image.width = photo.width;
     image.height = photo.height;
@@ -87,6 +87,7 @@ function renderGallery() {
 function applyFilter(filter) {
   activeFilter = filter;
   visibleIndexes = [];
+  gallery.classList.toggle('is-compact', filter === 'flora');
 
   document.querySelectorAll('.photo').forEach((card, index) => {
     const visible = filter === 'all' || card.dataset.category === filter;
