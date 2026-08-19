@@ -205,6 +205,17 @@ siteNav.addEventListener('click', (event) => {
   menuButton.setAttribute('aria-expanded', 'false');
 });
 
+document.addEventListener('contextmenu', (event) => {
+  if (event.target.matches('img')) event.preventDefault();
+});
+
+document.addEventListener('dragstart', (event) => {
+  if (event.target.matches('img')) event.preventDefault();
+});
+
 document.querySelector('#year').textContent = new Date().getFullYear();
 renderGallery();
+document.querySelectorAll('img').forEach((image) => {
+  image.draggable = false;
+});
 
