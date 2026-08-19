@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ask Barrett Papan about wildlife and Arkansas photography for a restaurant, office, hotel, or other space.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0b0a">
+  <title>Artwork Inquiry | Barrett Papan Photography</title>
+  <link rel="canonical" href="https://barrettpapan.com/artwork-inquiry.html">
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner-page">
+  <a class="skip-link" href="#inquiry-form">Skip to inquiry form</a>
+
+  <header class="site-header is-scrolled">
+    <a class="brand" href="index.html" aria-label="Barrett Papan Photography, home">
+      <span>Barrett Papan</span>
+      <small>Photography</small>
+    </a>
+    <nav class="site-nav" aria-label="Inquiry page navigation">
+      <a href="index.html">Portfolio home</a>
+    </nav>
+  </header>
+
+  <main class="inquiry-shell">
+    <section class="inquiry-intro" aria-labelledby="inquiry-title">
+      <p class="kicker">Artwork inquiry</p>
+      <h1 id="inquiry-title">Tell me about your space.</h1>
+      <p>Share a few details below, including any photograph you already have in mind. I will follow up personally to talk through the image, size, finish, and next steps.</p>
+
+      <div class="form-fallback">
+        <p>If you would rather contact me directly, copy my email address:</p>
+        <span class="email-address">barrettpapan@gmail.com</span>
+        <button class="copy-email-button" id="copy-email" type="button">Copy email address</button>
+        <p class="copy-status" id="copy-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <form class="inquiry-form" id="inquiry-form" action="https://formsubmit.co/barrettpapan@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New artwork inquiry from barrettpapan.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://barrettpapan.com/thank-you.html">
+      <input type="hidden" name="_url" value="https://barrettpapan.com/artwork-inquiry.html">
+      <input type="hidden" name="_autoresponse" value="Thank you for reaching out about artwork. I received your inquiry and will be in touch soon. Barrett Papan">
+      <label class="honeypot" aria-hidden="true">Leave this field empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input id="name" name="Name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="organization">Business or organization <span class="optional">optional</span></label>
+          <input id="organization" name="Business or organization" type="text" autocomplete="organization">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone number <span class="optional">optional</span></label>
+          <input id="phone" name="Phone number" type="tel" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="photograph">Which photograph are you interested in?</label>
+        <select id="photograph" name="Photograph" required>
+          <option value="" selected disabled>Select a photograph</option>
+          <option>Cattle in Pasture</option>
+          <option>Little Blue Heron</option>
+          <option>Canada Geese in Mist</option>
+          <option>Three Least Sandpipers</option>
+          <option>Least Sandpipers at Sunset</option>
+          <option>Ruby-throated Hummingbird</option>
+          <option>White-tailed Deer Fawns</option>
+          <option>Great Blue Heron at Sunset</option>
+          <option>American Beaver</option>
+          <option>Wood Duck and Ducklings</option>
+          <option>American Robin with Berry</option>
+          <option>Red Berries</option>
+          <option>Another photograph from the website</option>
+          <option>I am not sure yet</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="space">What kind of space is it?</label>
+          <select id="space" name="Type of space" required>
+            <option value="" selected disabled>Select a space</option>
+            <option>Restaurant or cafe</option>
+            <option>Office</option>
+            <option>Hotel or lodging</option>
+            <option>Retail space</option>
+            <option>Home</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="size">Approximate size <span class="optional">optional</span></label>
+          <input id="size" name="Approximate size" type="text" placeholder="For example, about 24 inches wide">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="details">Tell me about the space or anything else I should know <span class="optional">optional</span></label>
+        <textarea id="details" name="Additional details" placeholder="You can describe the wall, colors, timeline, or what you are hoping to find."></textarea>
+        <p class="form-help">A short note is plenty. I can help with the details after I reply.</p>
+      </div>
+
+      <div class="form-actions">
+        <button class="submit-button" type="submit">Send inquiry to Barrett</button>
+        <p class="form-privacy">Your contact information and message will be used to respond to this artwork inquiry.</p>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Barrett Papan Photography</span>
+    <a href="index.html">Return to portfolio</a>
+  </footer>
+
+  <script>
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    const copyButton = document.querySelector('#copy-email');
+    const copyStatus = document.querySelector('#copy-status');
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('barrettpapan@gmail.com');
+        copyStatus.textContent = 'Email address copied.';
+      } catch {
+        copyStatus.textContent = 'Select the email address above and copy it.';
+      }
+    });
+  </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

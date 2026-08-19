@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0b0a">
+  <title>Inquiry Sent | Barrett Papan Photography</title>
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner-page">
+  <header class="site-header is-scrolled">
+    <a class="brand" href="index.html" aria-label="Barrett Papan Photography, home">
+      <span>Barrett Papan</span>
+      <small>Photography</small>
+    </a>
+    <nav class="site-nav" aria-label="Confirmation page navigation">
+      <a href="index.html">Portfolio home</a>
+    </nav>
+  </header>
+
+  <main class="thank-you-main">
+    <section class="thank-you-card" aria-labelledby="thank-you-title">
+      <p class="kicker">Message sent</p>
+      <h1 id="thank-you-title">Thank you for reaching out.</h1>
+      <p>Your artwork inquiry has been sent to Barrett. He will reply using the contact information you provided.</p>
+      <a class="return-link" href="index.html#work">Return to the photographs</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Barrett Papan Photography</span>
+    <a href="index.html">Portfolio home</a>
+  </footer>
+
+  <script>document.querySelector('#year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

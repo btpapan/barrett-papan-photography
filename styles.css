@@ -375,6 +375,238 @@ footer {
   color: var(--muted);
 }
 
+.inner-page {
+  min-height: 100svh;
+  padding-top: 84px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(115, 126, 100, 0.12), transparent 38%),
+    var(--background);
+}
+
+.inner-page .site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(8, 9, 8, 0.96);
+  backdrop-filter: blur(16px);
+}
+
+.inquiry-shell {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(520px, 1.28fr);
+  gap: clamp(60px, 9vw, 150px);
+  width: var(--page);
+  margin-inline: auto;
+  padding: clamp(80px, 10vw, 150px) 0;
+}
+
+.inquiry-intro {
+  align-self: start;
+  position: sticky;
+  top: 150px;
+}
+
+.inquiry-intro h1,
+.thank-you-card h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6.7vw, 104px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+}
+
+.inquiry-intro > p:not(.kicker),
+.thank-you-card > p:not(.kicker) {
+  max-width: 580px;
+  margin: 28px 0 0;
+  color: #c5c7c1;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.inquiry-form {
+  display: grid;
+  gap: 28px;
+  padding: clamp(30px, 4vw, 58px);
+  border: 1px solid var(--line);
+  background: rgba(17, 19, 16, 0.72);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-field {
+  display: grid;
+  gap: 9px;
+}
+
+.form-field label,
+.form-legend {
+  color: #d8d8d2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-field .optional {
+  color: #7f827b;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #42453f;
+  border-radius: 0;
+  padding: 13px 14px;
+  background: #0d0f0c;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #eeeae0;
+  outline: 2px solid rgba(238, 234, 224, 0.22);
+  outline-offset: 2px;
+}
+
+.form-help {
+  margin: -2px 0 0;
+  color: #8f928b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 26px;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.submit-button,
+.copy-email-button,
+.return-link {
+  border: 1px solid #eeeae0;
+  padding: 13px 18px;
+  background: #eeeae0;
+  color: #111;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible,
+.copy-email-button:hover,
+.copy-email-button:focus-visible,
+.return-link:hover,
+.return-link:focus-visible {
+  background: transparent;
+  color: #eeeae0;
+}
+
+.form-privacy {
+  max-width: 390px;
+  margin: 0;
+  color: #81847d;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.form-fallback {
+  display: grid;
+  gap: 10px;
+  margin-top: 38px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.form-fallback p {
+  margin: 0;
+  color: #a9aba5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.email-address {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.copy-email-button {
+  justify-self: start;
+  padding: 10px 13px;
+  background: transparent;
+  color: #eeeae0;
+}
+
+.copy-email-button:hover,
+.copy-email-button:focus-visible {
+  background: #eeeae0;
+  color: #111;
+}
+
+.copy-status {
+  min-height: 1.4em;
+  margin: 0;
+  color: #b8bcb3;
+  font-size: 11px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.thank-you-main {
+  display: grid;
+  min-height: calc(100svh - 84px);
+  place-items: center;
+  width: var(--page);
+  margin-inline: auto;
+  padding: 80px 0;
+}
+
+.thank-you-card {
+  width: min(760px, 100%);
+  padding: clamp(38px, 7vw, 80px);
+  border: 1px solid var(--line);
+  background: rgba(17, 19, 16, 0.72);
+}
+
+.thank-you-card h1 {
+  font-size: clamp(50px, 7vw, 86px);
+}
+
+.return-link {
+  display: inline-block;
+  margin-top: 34px;
+}
+
 .about {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -582,6 +814,15 @@ footer {
   .about-copy {
     margin-top: 0;
   }
+
+  .inquiry-shell {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .inquiry-intro {
+    position: static;
+  }
 }
 
 @media (max-width: 700px) {
@@ -742,6 +983,50 @@ footer {
 
   .lightbox-next {
     right: 6px;
+  }
+
+  .inner-page {
+    padding-top: 70px;
+  }
+
+  .inner-page .site-nav {
+    position: static;
+    display: flex;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  .inquiry-shell {
+    gap: 36px;
+    padding: 64px 0 80px;
+  }
+
+  .inquiry-form {
+    gap: 24px;
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .thank-you-main {
+    min-height: calc(100svh - 70px);
+    padding: 50px 0;
+  }
+
+  .thank-you-card {
+    padding: 34px 22px;
   }
 }
 
