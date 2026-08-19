@@ -1,36 +1,36 @@
 const photos = [
-  { slug: 'golden-flock', category: 'wildlife', width: 4887, height: 3258, alt: 'A flock of shorebirds gathered in golden water at sunset.' },
-  { slug: 'shorebirds-at-sunset', category: 'wildlife', width: 2079, height: 1386, alt: 'Four shorebirds silhouetted along a bright shoreline at sunset.' },
-  { slug: 'three-shorebirds', category: 'wildlife', width: 2657, height: 1771, alt: 'Three shorebirds walking together through shallow golden water.' },
-  { slug: 'hummingbird', category: 'wildlife', width: 2048, height: 1365, alt: 'A hummingbird hovering in flight against a soft blue background.' },
-  { slug: 'twin-fawns', category: 'wildlife', width: 2048, height: 1365, alt: 'Two white-tailed deer fawns standing together in a sunlit meadow.' },
-  { slug: 'beaver', category: 'wildlife', width: 4719, height: 3146, alt: 'A wet beaver walking over rocks at the edge of a wooded area.' },
-  { slug: 'heron-landing', category: 'wildlife', width: 4187, height: 2791, alt: 'A great blue heron landing over a dark pond beside sunlit trees.' },
-  { slug: 'misty-ducks', category: 'wildlife', width: 5686, height: 3791, alt: 'Ducks drifting across a misty lake in early light.' },
-  { slug: 'little-blue-heron', category: 'wildlife', width: 2048, height: 1445, alt: 'A little blue heron standing beside green reeds in a wetland.' },
-  { slug: 'heron-through-reeds', category: 'wildlife', width: 11023, height: 7349, alt: 'A little blue heron seen through soft foreground reeds.' },
-  { slug: 'red-winged-blackbird', category: 'wildlife', width: 2048, height: 1365, alt: 'A red-winged blackbird calling from a bare branch.' },
-  { slug: 'squirrel-on-lichen', category: 'wildlife', width: 2048, height: 1365, alt: 'A squirrel paused on a lichen-covered tree branch.' },
-  { slug: 'robin-with-berry', category: 'wildlife', width: 4103, height: 2735, alt: 'An American robin holding a berry while perched among bare branches.' },
-  { slug: 'bluebird', category: 'wildlife', width: 4522, height: 3015, alt: 'A bluebird perched on a branch beneath bright green leaves.' },
-  { slug: 'heron-reflection', category: 'wildlife', width: 6000, height: 4000, alt: 'A distant heron perched above a still pond and its reflection.' },
-  { slug: 'distant-heron', category: 'wildlife', width: 5370, height: 3580, alt: 'A heron flying low across a pond near a wooded shoreline.' },
-  { slug: 'heron-in-foliage', category: 'wildlife', width: 2048, height: 1365, alt: 'A great blue heron framed by dense summer foliage.' },
-  { slug: 'ducklings', category: 'wildlife', width: 2048, height: 1365, alt: 'Ducklings swimming under broad green leaves.' },
-  { slug: 'alligator', category: 'wildlife', width: 6000, height: 4000, alt: 'An alligator resting beneath a fallen tree in warm light.' },
-  { slug: 'heron-at-sunset', category: 'wildlife', width: 2998, height: 1999, alt: 'A great blue heron in profile against warm sunset light.' },
-  { slug: 'horses-on-beach', category: 'places', width: 6000, height: 4000, alt: 'A rider leading horses along a turquoise shoreline.' },
-  { slug: 'beach-house', category: 'places', width: 4165, height: 3332, alt: 'A small white beach house beneath a wide blue sky.' },
-  { slug: 'pasture', category: 'places', width: 2728, height: 1830, alt: 'Cattle grazing in a quiet pasture bordered by wooded hills.' },
-  { slug: 'quiet-lake', category: 'places', width: 2728, height: 1830, alt: 'A calm lake and small shoreline buildings under a pale sky.' },
-  { slug: 'marina', category: 'places', width: 2256, height: 1513, alt: 'A small marina building reflected in still water.' },
-  { slug: 'sunlit-tree', category: 'places', width: 2728, height: 1830, alt: 'A large tree backlit by late afternoon sun.' },
-  { slug: 'grain-silos', category: 'places', width: 2048, height: 1365, alt: 'Grain silos rising beyond a bright green field.' },
-  { slug: 'city-skyline', category: 'places', width: 4818, height: 3212, alt: 'A city skyline seen across a river in winter light.' },
-  { slug: 'winter-berries', category: 'flora', width: 4896, height: 3264, alt: 'Red berries and green leaves lit from behind.' },
-  { slug: 'purple-flowers', category: 'flora', width: 2728, height: 1830, alt: 'Soft purple flowers in cool evening color.' },
-  { slug: 'pink-zinnia', category: 'flora', width: 2591, height: 1738, alt: 'A pink zinnia against circular highlights and shadow.' },
-  { slug: 'passionflower', category: 'flora', width: 2728, height: 1830, alt: 'A pale purple passionflower against deep green leaves.' }
+  { slug: 'golden-flock', category: 'wildlife', width: 4887, height: 3258, alt: 'A flock of shorebirds gathered in golden water at sunset.', title: 'Least Sandpipers at Sunset', species: 'Least Sandpiper', location: 'Fort Walton Beach, Florida', date: 'March 2025' },
+  { slug: 'shorebirds-at-sunset', category: 'wildlife', width: 2079, height: 1386, alt: 'Four Least Sandpipers along a bright shoreline at sunrise.', title: 'At the Waterline', species: 'Least Sandpiper', location: 'Fort Walton Beach, Florida', date: 'March 2025' },
+  { slug: 'three-shorebirds', category: 'wildlife', width: 2657, height: 1771, alt: 'Three Least Sandpipers walking together through shallow water at sunrise.', title: 'Morning Procession', species: 'Least Sandpiper', location: 'Fort Walton Beach, Florida', date: 'March 2025' },
+  { slug: 'hummingbird', category: 'wildlife', width: 2048, height: 1365, alt: 'A Ruby-throated Hummingbird hovering in flight against a soft blue background.', title: 'Between Wingbeats', species: 'Ruby-throated Hummingbird', location: 'Hobbs State Park Conservation Area', date: 'August 2025' },
+  { slug: 'twin-fawns', category: 'wildlife', width: 2048, height: 1365, alt: 'Two white-tailed deer fawns standing together in a sunlit meadow.', title: 'Two in the Meadow', species: 'White-tailed Deer', location: 'Lake Fayetteville, Arkansas', date: 'July 2025' },
+  { slug: 'beaver', category: 'wildlife', width: 4719, height: 3146, alt: 'A wet American Beaver walking over rocks at the edge of a wooded area.', title: 'Back on Land', species: 'American Beaver', location: 'Lake Fayetteville, Arkansas', date: 'May 2025' },
+  { slug: 'heron-landing', category: 'wildlife', width: 4187, height: 2791, alt: 'A Great Blue Heron landing over a dark pond beside sunlit trees.', title: 'Coming to Rest', species: 'Great Blue Heron', location: 'Lake Fayetteville, Arkansas', date: 'June 2025' },
+  { slug: 'misty-ducks', category: 'wildlife', width: 5686, height: 3791, alt: 'Canada Geese drifting across a misty lake in early light.', title: 'Morning Mist', species: 'Canada Goose', location: 'Lake Wilson, Fayetteville, Arkansas', date: 'March 2026' },
+  { slug: 'little-blue-heron', category: 'wildlife', width: 2048, height: 1445, alt: 'A Little Blue Heron standing beside green reeds in a wetland.', title: 'Blue in Green', species: 'Little Blue Heron', location: 'Forest Park, St. Louis, Missouri', date: 'June 2025' },
+  { slug: 'heron-through-reeds', category: 'wildlife', width: 11023, height: 7349, alt: 'A Little Blue Heron seen through soft foreground reeds.', title: 'Through the Reeds', species: 'Little Blue Heron', location: 'Forest Park, St. Louis, Missouri', date: 'June 2025' },
+  { slug: 'red-winged-blackbird', category: 'wildlife', width: 2048, height: 1365, alt: 'A Red-winged Blackbird calling from a bare branch.', title: 'Calling', species: 'Red-winged Blackbird', location: 'Forest Park, St. Louis, Missouri', date: 'June 2025' },
+  { slug: 'squirrel-on-lichen', category: 'wildlife', width: 2048, height: 1365, alt: 'An Eastern Gray Squirrel paused on a lichen-covered tree branch.', title: 'Squirrel on Lichen', species: 'Eastern Gray Squirrel', location: 'Conway, Arkansas', date: 'June 2026' },
+  { slug: 'robin-with-berry', category: 'wildlife', width: 4103, height: 2735, alt: 'An American Robin holding a berry while perched among bare branches.', title: 'American Robin with Berry', species: 'American Robin', location: 'Lake Fayetteville, Arkansas', date: 'January 2026' },
+  { slug: 'bluebird', category: 'wildlife', width: 4522, height: 3015, alt: 'An Eastern Bluebird perched on a branch beneath bright green leaves.', title: 'Eastern Bluebird', species: 'Eastern Bluebird', location: 'Murray Park, Little Rock, Arkansas', date: 'June 2026' },
+  { slug: 'heron-reflection', category: 'wildlife', width: 6000, height: 4000, alt: 'A distant Great Blue Heron perched above a still pond and its reflection.', title: 'Great Blue Heron and His Reflection', species: 'Great Blue Heron', location: 'Lake Fayetteville, Arkansas', date: 'June 2025' },
+  { slug: 'distant-heron', category: 'wildlife', width: 5370, height: 3580, alt: 'A Great Blue Heron flying low across a pond near a wooded shoreline.', title: 'Great Blue Heron in Flight', species: 'Great Blue Heron', location: 'Lake Fayetteville, Arkansas', date: 'June 2025' },
+  { slug: 'heron-in-foliage', category: 'wildlife', width: 2048, height: 1365, alt: 'A Great Blue Heron framed by dense summer foliage.', title: 'Great Blue Heron in Foliage', species: 'Great Blue Heron', location: 'Forest Park, St. Louis, Missouri', date: 'June 2026' },
+  { slug: 'ducklings', category: 'wildlife', width: 2048, height: 1365, alt: 'A female Wood Duck and ducklings swimming under broad green leaves.', title: 'Wood Duck and Ducklings', species: 'Wood Duck', location: 'Forest Park, St. Louis, Missouri', date: 'June 2026' },
+  { slug: 'alligator', category: 'wildlife', width: 6000, height: 4000, alt: 'A close view of a Muscovy Duck resting beneath a fallen tree.', title: 'Muscovy Duck', species: 'Muscovy Duck', location: 'Fayetteville, Arkansas', date: 'June 2025' },
+  { slug: 'heron-at-sunset', category: 'wildlife', width: 2998, height: 1999, alt: 'A Great Blue Heron in profile against warm sunset light.', title: 'Great Blue Heron at Sunset', species: 'Great Blue Heron', location: 'Fort Walton Beach, Florida', date: 'March 2025' },
+  { slug: 'horses-on-beach', category: 'places', width: 6000, height: 4000, alt: 'A rider leading horses along a turquoise shoreline.', title: 'Horses on the Beach', location: 'Spanish Wells, Bahamas', date: 'January 2025' },
+  { slug: 'beach-house', category: 'places', width: 4165, height: 3332, alt: 'A small white beach house beneath a wide blue sky.', title: 'Beach House', location: 'Spanish Wells, Bahamas', date: 'January 2025' },
+  { slug: 'pasture', category: 'places', width: 2728, height: 1830, alt: 'Cattle grazing in a quiet pasture bordered by wooded hills.', title: 'Cattle in Pasture', location: 'Mountainburg, Arkansas', date: 'September 2025' },
+  { slug: 'quiet-lake', category: 'places', width: 2728, height: 1830, alt: 'Lake Dardanelle and small shoreline buildings under a pale sky.', title: 'Lake Dardanelle', location: 'Lake Dardanelle, Arkansas', date: 'October 2025' },
+  { slug: 'marina', category: 'places', width: 2256, height: 1513, alt: 'Russellville Marina and boats reflected in still water.', title: 'Russellville Marina', location: 'Lake Dardanelle, Arkansas', date: 'October 2025' },
+  { slug: 'sunlit-tree', category: 'places', width: 2728, height: 1830, alt: 'A large tree backlit by late afternoon sun.', title: 'Backlit Tree', location: 'Lake Dardanelle, Arkansas', date: 'October 2025' },
+  { slug: 'grain-silos', category: 'places', width: 2048, height: 1365, alt: 'Grain silos rising beyond a bright green field.', title: 'Grain Silos', location: 'Bald Knob National Wildlife Refuge, Arkansas', date: 'July 2025' },
+  { slug: 'city-skyline', category: 'places', width: 4818, height: 3212, alt: 'The Little Rock skyline seen across the Arkansas River in winter light.', title: 'Little Rock Skyline', location: 'Little Rock, Arkansas' },
+  { slug: 'winter-berries', category: 'flora', width: 4896, height: 3264, alt: 'Red berries and green leaves lit from behind.', title: 'Red Berries', location: 'Lake Fayetteville, Arkansas', date: 'April 2026' },
+  { slug: 'purple-flowers', category: 'flora', width: 2728, height: 1830, alt: 'Blue Mistflower blooming in cool evening color.', title: 'Blue Mistflower', species: 'Blue Mistflower', location: 'Little Rock, Arkansas', date: 'July 2026' },
+  { slug: 'pink-zinnia', category: 'flora', width: 2591, height: 1738, alt: 'A Pink Zinnia against circular highlights and shadow.', title: 'Pink Zinnia', species: 'Zinnia', location: 'Little Rock, Arkansas', date: 'July 2026' },
+  { slug: 'passionflower', category: 'flora', width: 2728, height: 1830, alt: 'A Purple Passionflower with a small beetle against deep green leaves.', title: 'Purple Passionflower', species: 'Purple Passionflower', location: 'Little Rock, Arkansas', date: 'July 2026' }
 ];
 
 const gallery = document.querySelector('#gallery');
@@ -38,6 +38,8 @@ const filters = [...document.querySelectorAll('.filter')];
 const filterBar = document.querySelector('.filters');
 const lightbox = document.querySelector('#lightbox');
 const lightboxImage = document.querySelector('#lightbox-image');
+const lightboxTitle = document.querySelector('#lightbox-title');
+const lightboxMeta = document.querySelector('#lightbox-meta');
 const lightboxCategory = document.querySelector('#lightbox-category');
 const lightboxCount = document.querySelector('#lightbox-count');
 const closeButton = document.querySelector('.lightbox-close');
@@ -64,7 +66,7 @@ function renderGallery() {
     button.type = 'button';
     button.dataset.index = index;
     button.dataset.category = photo.category;
-    button.setAttribute('aria-label', `Open ${photo.category} photograph`);
+    button.setAttribute('aria-label', `Open ${photo.title}`);
 
     const image = document.createElement('img');
     image.src = `images/thumb/${photo.slug}.jpg`;
@@ -112,6 +114,16 @@ function setLightboxPhoto(index) {
 
   lightboxImage.src = `images/large/${photo.slug}.jpg`;
   lightboxImage.alt = photo.alt;
+  lightboxTitle.textContent = photo.title;
+
+  const metaParts = [
+    photo.species && photo.species !== photo.title ? photo.species : null,
+    photo.location,
+    photo.date
+  ].filter(Boolean);
+  lightboxMeta.textContent = metaParts.join(', ');
+  lightboxMeta.hidden = metaParts.length === 0;
+
   lightboxCategory.textContent = categoryLabel(photo.category);
   lightboxCount.textContent = `${String(position + 1).padStart(2, '0')} / ${String(visibleIndexes.length).padStart(2, '0')}`;
 

@@ -139,9 +139,15 @@
     <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous photograph">&larr;</button>
     <figure>
       <img id="lightbox-image" src="" alt="">
-      <figcaption>
-        <span id="lightbox-category"></span>
-        <span id="lightbox-count"></span>
+      <figcaption class="lightbox-caption">
+        <div class="lightbox-details">
+          <strong id="lightbox-title"></strong>
+          <span id="lightbox-meta"></span>
+        </div>
+        <div class="lightbox-context">
+          <span id="lightbox-category"></span>
+          <span id="lightbox-count"></span>
+        </div>
       </figcaption>
     </figure>
     <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next photograph">&rarr;</button>
