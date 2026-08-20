@@ -21,6 +21,7 @@ $photos = @(
   @{ Slug = 'heron-landing'; Source = '_DSF2727-Enhanced-NR.JPG' },
   @{ Slug = 'misty-ducks'; Source = 'Best Best\_DSF2802-2.jpg' },
   @{ Slug = 'little-blue-heron'; Source = '_DSF3506-Enhanced-NR-2.JPG' },
+  @{ Slug = 'juvenile-little-blue-heron'; Source = 'Best Best\_DSF3521-Enhanced-NR.JPG' },
   @{ Slug = 'heron-through-reeds'; Source = '_DSF3519.jpg' },
   @{ Slug = 'red-winged-blackbird'; Source = 'Best Best\_DSF3280-Enhanced-NR-2.JPG' },
   @{ Slug = 'squirrel-on-lichen'; Source = '_DSF8174.JPG' },
